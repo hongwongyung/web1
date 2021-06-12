@@ -1,0 +1,116 @@
+
+  .container {
+  display : flex;
+  background : #FFEB33;
+  border : 1px solid #DDC911;
+  width : 360px;
+  height : 587px;
+  box-shadow: 1px 1px 1px 1px #F0F0F0, -1px -1px 1px 1px #F0F0F0;
+  flex-direction : column;
+  align-items: center;
+  }
+
+#item1{
+padding-top: 27px;
+}
+#circle{
+padding-top: 5px;
+}
+
+#item10{
+padding-top: 4px;
+}
+
+
+.container #id{
+padding-bottom: 0px;
+border-bottom: 0px;
+font-size: 12px;
+font-weight: 50;
+}
+
+.container #password{
+border-top : 1px solid #F2F2F2;
+font-size: 13px;
+font-weight: 100;
+}
+.container .item4{
+  padding-top: 4px;
+}
+
+
+input[type="checkbox"] + label{
+display: inline-block;
+width: 13px;
+height: 13px;
+border: 1px solid #EFE33F;
+cursor: pointer;
+background: white;
+}
+
+input[type="checkbox"]{
+display : none;
+}
+input[type="checkbox"]:checked + label {
+    background-color: white;
+  }
+
+
+
+
+
+.container #item8{
+padding-top: 145px;
+}
+.container #item9{
+padding-top: 145px;
+}
+
+#gridd
+{
+border: none ;
+display:grid;
+grid-template-columns:  1fr 2fr;
+align-self:  flex-end	;
+
+}
+
+
+#grid2
+{
+border: none ;
+display:grid;
+grid-template-columns:  15px 1fr 1fr;
+align-self:flex-start;
+padding-left: 58px;
+padding-top: 4px;
+font-size: 12px;
+font-weight: normal;
+color: #7F7519
+}
+
+
+#grid
+{
+border: none ;
+display:grid;
+grid-template-columns:  1fr 1fr;
+font-size: 12px;
+font-weight: 400;
+color: #7F7519
+}
+
+span {
+border-right: solid 1px #E5D32E
+}
+
+
+#물음표 {
+    text-align: bottom;}
+
+input{
+  color : #ACACAC;
+  border : 1px solid #DDC911;
+  width : 240px;
+  height : 37px;
+}
