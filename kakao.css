@@ -16,7 +16,9 @@ padding-top: 27px;
 #circle{
 padding-top: 5px;
 }
-
+#item5{
+      padding-top: 3px;
+}
 #item10{
 padding-top: 4px;
 }
@@ -32,7 +34,9 @@ font-weight: 50;
 .container #password{
 border-top : 1px solid #F2F2F2;
 font-size: 13px;
-font-weight: 100;
+font-weight: 50;
+color : #ACACAC;
+
 }
 .container .item4{
   padding-top: 4px;
@@ -46,6 +50,7 @@ height: 13px;
 border: 1px solid #EFE33F;
 cursor: pointer;
 background: white;
+
 }
 
 input[type="checkbox"]{
@@ -88,7 +93,9 @@ font-size: 12px;
 font-weight: normal;
 color: #7F7519
 }
-
+#wkehd{
+      padding-top: 3px;
+}
 
 #grid
 {
@@ -113,4 +120,35 @@ input{
   border : 1px solid #DDC911;
   width : 240px;
   height : 37px;
+}
+
+input::placeholder{
+  font-weight: 50;
+  color : #ACACAC;
+}
+input[type="submit"]{
+
+  width: 36px;
+  padding-bottom: 7px;
+  color: #666666;
+  font-size: 16px;
+
+}
+
+input[type="button"]{
+      width: 245px;
+}
+
+.form2 > form{
+  display : inline-block;
+  position : relative;
+}
+.form2 > form > input[type="submit"]{
+  font-family: "FontAwesome";
+  font-weight : 900;
+  position : absolute;
+  border : none;
+  background-color : transparent;
+  right : 5px;
+  top : 5px;
 }
