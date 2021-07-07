@@ -7,26 +7,94 @@
   </head>
 
   <script src="https://kit.fontawesome.com/ba34bbb9fd.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
   <body>
     <div class="container">
       <div id= "gridd">
-      <div id= "circle"class="item item0"><span><img src="설정.png" >&nbsp;&nbsp;</span></div>
-      <div id= "item10" class="item item10">&nbsp;&nbsp;<img src="밑줄.png" ><img src="엑스.png" ></div> </div>
+      <div id= "circle"class="item item0"><span><img src="설정.png"  title="설정" >&nbsp;&nbsp;</span></div>
+      <div id= "item10" class="item item10">&nbsp;&nbsp;<img src="밑줄.png" title="밑줄" ><img src="엑스.png" title="닫기" ></div> </div>
       <div id= "item1" class="item item1"><img src="카카오.png" ></div>
+
+      <div id="block">
       <div class="item item2"><div class="form2">
-        <form action=""><input id="id" type = "text" placeholder = "&nbsp;카카오계정 (이메일 또는 전화번호)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"><input type="submit" value="&#xf0d7;">  </form>
+        <form action=""><input id="id" type = "text" placeholder = "카카오계정 (이메일 또는 전화번호)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"><input type="submit" value="&#xf0d7;">  </form>
   </div>
 </div>
-      <div class="item item3"><input id="password" type = "password" placeholder = "&nbsp;비밀번호" ></div>
-      <div class="item item4"><input  style = "text-align : center" type = "button" value = "로그인"></div>
+      <div class="item item3"><input id="password" type = "text" placeholder = "비밀번호" color="black" ></div>
+      <div class="item item4"><input id="button"  style = "text-align : center" type = "button" value = "로그인"></div>
       <div id = "grid2">
-      <div id="item5" class="item item5"><input id="checkbox" type = "checkbox" value="TRUE"><label for = "checkbox"></label></div><div id="wkehd">&nbsp;자동로그인&nbsp;</div><div><img src="물음표.png" width></div></div>
+      <div id="item5" class="item item5"><input id="checkbox" type = "checkbox" value="TRUE"><label for = "checkbox">&nbsp;&nbsp;&nbsp;&nbsp;자동로그인</label></div><div class = "imgSelects"><a class="imgSelect">
+        <img src="물음표.png" type="button">
+      </a></div></div>
+    </div>
+
       <div id = "grid">
-      <div id="item8" calss="item item8"><span>카카오계정 찾기&nbsp;&nbsp;</span></div>
-      <div id="item9" calss="item item9">&nbsp;&nbsp;비밀번호 재설정</div> </div>
+      <div id="item8" calss="item item8"><a href="https://accounts.kakao.com/weblogin/find_account_guide?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo" target='_blank'><span id="serch">카카오계정 찾기&nbsp;&nbsp;</span></a></div>
+      <div id="item9" calss="item item9"><a href="https://accounts.kakao.com/weblogin/find_password?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Fa" target='_blank'><span id="remind">&nbsp;&nbsp;비밀번호 재설정</span></a></div> </div>
+
+      <div class="popupLayer"   onclick="closeLayer(this)">
+      	PC버전 실행시 잠금모드로 자동로그인됩니</br>
+      	다. 로그인 후 설정에서 잠금모드 없는 자동</br>
+        로그인으로 변경 할 수 있습니다.
+      </div>
 
     </div>
   </body>
+
+  <script>
+  function oncheckbox(b){
+    $(b).on('#checkbox');
+  }
+  </script>
+
+<script>
+$('#id').on('input', checkInput);
+$('#password').on('input', checkInput);
+
+function checkInput() {
+  var idCheck = $('#id').val();
+  var passwordCheck = $('#password').val();
+  var btnLogin = $('#button');
+
+  if (idCheck === '' || passwordCheck === '') {
+    btnLogin.removeClass('on');
+  } else {
+    btnLogin.addClass('on');
+  }
+}
+</script>
+
+
+  <script>
+  function closeLayer( a ) {
+  	$(a).hide();
+  }
+
+  $(function(){
+  	$('.imgSelect').click(function()
+  	{
+  		var sWidth = window.innerWidth;
+  		var sHeight = window.innerHeight;
+
+  		var oWidth = $('.popupLayer').width();
+  		var oHeight = $('.popupLayer').height();
+
+  		var divLeft = 34;
+  		var divTop = 389;
+
+  		$('.popupLayer').css({
+  			"top": divTop,
+  			"left": divLeft,
+  			"position": "absolute"
+  		}).show();
+  	});
+  });
+
+
+
+
+  </script>
+
 </html>
